@@ -12,7 +12,7 @@
       <div class="container">
         <div class="bill">
           <label for="bill-price">Bill</label>
-          <input type="number" id="bill-price" placeholder="10.00." min="0">
+          <input type="number" id="bill-price" value="10" min="0">
         </div>
         <div>
           <div class="justify-between">
@@ -34,10 +34,10 @@
       <div class="container">
         <div>
           <div class="justify-between">
-            <label for="split">Split</label>
+            <label for="split-input">Split</label>
             <span id="split-number">1 person</span>
           </div>
-          <input type="range" id="split" min="1" max="20">
+          <input type="range" id="split-input" min="1" max="10" value="1">
         </div>
         <div class="justify-between">
           <span>Bill each</span>
@@ -50,44 +50,6 @@
       </div>
     </main>
 
-    <script>
-      const priceInput = document.querySelector('#bill-price');
-      const tipSlider = document.querySelector('#tip-input');
-      const tipPercentage = document.querySelector('#tip-percent');
-
-      const totalOutput = document.querySelector('#total');
-
-      function updateTotal() {
-        const price = priceInput.value;
-        const tip = tipSlider.value;
-
-        const total = price * (1 + tip / 100);
-        
-        totalOutput.innerHTML = `$ ${total.toFixed(2)}`;
-        updateTipPercentage();
-        updateTipOutput();
-      };
-
-      function updateTipPercentage() {
-        const tip = tipSlider.value;
-
-        tipPercentage.innerHTML = `${tip}%`;
-      }
-      
-      function updateTipOutput() {
-        const tipOutput = document.querySelector('#tip-amount');
-        const price = priceInput.value;
-        const tipPercent = tipSlider.value;
-
-        const tip = price * (tipPercent / 100);
-
-        tipOutput.innerHTML = `$ ${tip.toFixed(2)}`;
-      }
-
-      const allInputs = document.querySelectorAll('input');
-      allInputs.forEach(input => input.addEventListener('input', updateTotal))
-      
-
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
