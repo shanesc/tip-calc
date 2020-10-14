@@ -2,7 +2,7 @@
 
 :root {
   --green: #41e2a5;
-  --gray: dimgray;
+  --gray: #686868;
   --inner-shadow: inset 0 2px 2px lightgray;
 }
 
@@ -25,7 +25,6 @@ body {
   font-size: 1.8rem;
   font-weight: 300;
   color: var(--gray);
-  /* line-height: 1; */
 }
 
 h1 {
@@ -38,7 +37,7 @@ h1 {
 .wrapper {
   background: var(--green);
   max-width: 530px;
-  padding: 3rem 3rem 10rem;
+  padding: 3rem 3rem 7rem;
   margin: 2rem auto;
   border-radius: 4rem;
   display: grid;
@@ -58,6 +57,44 @@ h1 {
 .justify-between {
   display: flex;
   justify-content: space-between;
+}
+
+.bill {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+.total {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Style Inputs */
+
+.input-box {
+  padding: .8rem 1rem;
+  font: inherit;
+  font-size: 1.6rem;
+  background: whitesmoke;
+  border: 1px solid silver;
+  border-radius: 4px;
+  box-shadow: var(--inner-shadow);
+  display: flex;
+}
+
+.input-box > input {
+  width: 100%;
+  padding-left: .5rem;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.input-box > input:invalid {
+  border: blue;
 }
 
 input[type="range"] {
@@ -92,25 +129,4 @@ input[type="range"]::-moz-range-thumb {
   height: 2.2rem;
   border-radius: 50%;
   cursor: pointer;
-}
-
-.bill {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
-}
-
-.bill > input {
-  padding: .8rem 1rem;
-  font: inherit;
-  font-size: 1.6rem;
-  background: whitesmoke;
-  border: 1px solid silver;
-  border-radius: 4px;
-  box-shadow: var(--inner-shadow);
-}
-
-.total {
-  font-size: 2rem;
-  font-weight: bold;
 }
