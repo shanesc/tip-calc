@@ -2,9 +2,10 @@
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tip Calc</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="wrapper">
@@ -14,7 +15,13 @@
           <label for="bill-price">Bill</label>
           <div class="input-box">
             <span>$ </span>
-            <input type="number" id="bill-price" value="10" min="0" step="any">
+            <input
+              type="number"
+              id="bill-price"
+              value="10"
+              min="0"
+              step="any"
+            />
           </div>
         </div>
         <div>
@@ -22,13 +29,13 @@
             <label for="tip-input">Select tip</label>
             <span id="tip-percent">18%</span>
           </div>
-          <input type="range" id="tip-input" value="18">
+          <input type="range" id="tip-input" value="18" />
         </div>
         <div class="justify-between">
           <span>Tip</span>
           <span id="tip-amount">$ 1.00</span>
         </div>
-        <hr>
+        <hr />
         <div class="total justify-between">
           <span>Total</span>
           <span id="total">$ 0.00</span>
@@ -40,7 +47,7 @@
             <label for="split-input">Split</label>
             <span id="split-number">1 person</span>
           </div>
-          <input type="range" id="split-input" min="1" max="10" value="1">
+          <input type="range" id="split-input" min="1" max="10" value="1" />
         </div>
         <div class="justify-between">
           <span>Bill each</span>
